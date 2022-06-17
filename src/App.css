@@ -1,38 +1,74 @@
 .App {
   text-align: center;
+  margin: 100px 350px 100px 350px;
+  border: 1px solid #a4a2a2c0;
+  font-family: "Lato", sans-serif;
+}
+.daily-temperature {
+  font-size: 56px;
+}
+.daily-description {
+  font-size: 22px;
+  color: #969595;
+  letter-spacing: 0.7px;
+}
+.city {
+  text-decoration: underline;
+}
+.parameters,
+.max-min-temperature {
+  color: #969595;
 }
 
-.App-logo {
-  height: 40vmin;
+.numbers {
+  font-size: 26px;
+}
+.daily-temperature,
+.max-min-temperature,
+.numbers {
+  font-family: "Noto Sans HK", sans-serif;
+}
+.icon {
+  font-size: 24px;
+}
+.form {
+  height: 50px;
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.form input {
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+  color: #3e3d3d;
+  border: none;
+  outline: none;
+}
+.form label {
   pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content-input {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
 }
 
-.App-header {
-  background-color: #0707228c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form input:focus + .label-name .content-input,
+.form input:valid + .label-name .content-input {
+  transform: translateY(-130%);
+  font-size: 12px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
 }
