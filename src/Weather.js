@@ -53,14 +53,15 @@ export default function Weather() {
         Right now in <span className="city">{city}</span>, it's{" "}
         {weather.description}.
       </h3>
-      <div className="d-flex justify-content-evenly">
-        <ReactAnimatedWeather
-          icon="CLEAR_DAY"
-          color="#ffcc00"
-          size="70px"
-          animate={true}
-        />
-
+      <div className="d-flex justify-content-evenly m-5">
+        <div className="animated-icon">
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#ffcc00"
+            size="100px"
+            animate={true}
+          />
+        </div>
         <div>
           <strong>
             <p className="daily-temperature">{weather.temperature}°</p>
@@ -110,31 +111,59 @@ export default function Weather() {
       </div>
       <div className="d-flex justify-content-evenly m-5">
         <div>
-          IMAGE
+          <div className="animated-icon">
+            <ReactAnimatedWeather
+              icon="PARTLY_CLOUDY_DAY"
+              color="grey"
+              size="20px"
+              animate={true}
+            />
+          </div>
           <strong>
             <p>26° / 16°</p>
             <p>THU</p>
           </strong>
         </div>
         <div>
-          IMAGE
+          <div className="animated-icon">
+            <ReactAnimatedWeather
+              icon="CLOUDY"
+              color="grey"
+              size="20px"
+              animate={true}
+            />
+          </div>
           <strong>
             <p>30° / 14°</p>
-            <p>THU</p>
+            <p>FRI</p>
           </strong>
         </div>
         <div>
-          IMAGE
+          <div className="animated-icon">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="#ffcc00"
+              size="20px"
+              animate={true}
+            />
+          </div>
           <strong>
             <p>28° / 16°</p>
-            <p>THU</p>
+            <p>SAT</p>
           </strong>
         </div>
         <div>
-          IMAGE
+          <div className="animated-icon">
+            <ReactAnimatedWeather
+              icon="PARTLY_CLOUDY_DAY"
+              color="grey"
+              size="20px"
+              animate={true}
+            />
+          </div>
           <strong>
             <p>22° / 15°</p>
-            <p>THU</p>
+            <p>SUN</p>
           </strong>
         </div>
       </div>
