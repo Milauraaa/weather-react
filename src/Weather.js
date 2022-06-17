@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -53,10 +54,11 @@ export default function Weather() {
         {weather.description}.
       </h3>
       <div className="d-flex justify-content-evenly">
-        <img
-          className="weather-icon"
-          src={weather.icon}
-          alt={weather.description}
+        <ReactAnimatedWeather
+          icon="CLEAR_DAY"
+          color="#ffcc00"
+          size="70px"
+          animate={true}
         />
 
         <div>
