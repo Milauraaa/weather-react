@@ -1,23 +1,21 @@
 .App {
   text-align: center;
-  margin: 100px 350px 100px 350px;
+  margin: 100px 320px 100px 320px;
   border: 1px solid #a4a2a2c0;
   font-family: "Lato", sans-serif;
+  color: #969595;
 }
 .daily-temperature {
   font-size: 56px;
+  color: black;
 }
 .daily-description {
   font-size: 22px;
-  color: #969595;
   letter-spacing: 0.7px;
 }
 .city {
   text-decoration: underline;
-}
-.parameters,
-.max-min-temperature {
-  color: #969595;
+  color: black;
 }
 
 .numbers {
@@ -71,4 +69,11 @@
 .form input:focus + .label-name::after,
 .form input:valid + .label-name::after {
   transform: translateX(0%);
+}
+a {
+  text-decoration: none;
+  color: #454343;
+}
+a:hover {
+  color: #969595;
 }

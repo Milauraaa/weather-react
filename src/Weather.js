@@ -4,7 +4,6 @@ import axios from "axios";
 export default function Weather() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState({});
-  const [forecast, setForecast] = useState({});
 
   function displayWeather(response) {
     setWeather({
@@ -46,20 +45,23 @@ export default function Weather() {
     </div>
   );
   return (
-    <div className="container block-forecast">
+    <div className="container">
       {form}
       <h3 className="m-4 daily-description">
         {" "}
         Right now in <span className="city">{city}</span>, it's{" "}
         {weather.description}.
       </h3>
-      <div className="d-flex justify-content-evenly m-3">
-        <img src={weather.icon} alt={weather.description} />
+      <div className="d-flex justify-content-evenly">
+        <img
+          className="weather-icon"
+          src={weather.icon}
+          alt={weather.description}
+        />
 
         <div>
           <strong>
-            {" "}
-            <p className="daily-temperature">{weather.temperature}°</p>{" "}
+            <p className="daily-temperature">{weather.temperature}°</p>
             <p className="max-min-temperature">
               {weather.maxTemp}° / {weather.minTemp}°
             </p>
@@ -107,28 +109,38 @@ export default function Weather() {
       <div className="d-flex justify-content-evenly m-5">
         <div>
           IMAGE
-          <p>25°/16°</p>
-          <p>THU</p>
+          <strong>
+            <p>26° / 16°</p>
+            <p>THU</p>
+          </strong>
         </div>
         <div>
           IMAGE
-          <p>25°/16°</p>
-          <p>THU</p>
+          <strong>
+            <p>30° / 14°</p>
+            <p>THU</p>
+          </strong>
         </div>
         <div>
           IMAGE
-          <p>25°/16°</p>
-          <p>THU</p>
+          <strong>
+            <p>28° / 16°</p>
+            <p>THU</p>
+          </strong>
         </div>
         <div>
           IMAGE
-          <p>25°/16°</p>
-          <p>THU</p>
+          <strong>
+            <p>22° / 15°</p>
+            <p>THU</p>
+          </strong>
         </div>
       </div>
-      <a href="#">F° | C°</a>
-      <div className="mt-3">
-        <a href="#">Open-source code</a>, by Mila Yemelianenko
+      <div>
+        <a href="/">°F</a> | <a href="/">°C</a>
+      </div>
+      <div>
+        <a href="/">Open-source code</a>, by Mila Yemelianenko
       </div>
     </div>
   );
