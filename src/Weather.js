@@ -171,7 +171,10 @@ export default function Weather() {
         <a href="/">°F</a> | <a href="/">°C</a>
       </div>
       <div>
-        <a href="/">Open-source code</a>, by Mila Yemelianenko
+        <a href="https://github.com/Milauraaa/weather-react">
+          Open-source code
+        </a>
+        , by Mila Yemelianenko
       </div>
     </div>
   );
