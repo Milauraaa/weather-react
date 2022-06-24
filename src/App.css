@@ -75,10 +75,12 @@ footer {
 .form input:valid + .label-name::after {
   transform: translateX(0%);
 }
-a {
+footer a,
+.unitsLink a {
   text-decoration: none;
   color: #454343;
 }
-a:hover {
+footer a:hover,
+.unitsLink a:hover {
   color: #969595;
 }

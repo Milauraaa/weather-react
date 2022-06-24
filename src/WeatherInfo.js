@@ -1,6 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,15 +13,14 @@ export default function WeatherInfo(props) {
       </h3>
       <div className="d-flex justify-content-evenly m-5">
         <div className="animated-icon">
-          <WeatherIcon code={props.data.icon} alt={props.data.description} />
+          <WeatherIcon code={props.data.icon} />
         </div>
         <div>
-          <p className="daily-temperature">{props.data.temperature}°</p>
-          <strong>
-            <p className="max-min-temperature">
-              {props.data.maxTemp}° / {props.data.minTemp}°
-            </p>
-          </strong>
+          <WeatherTemperature
+            celsius={props.data.temperature}
+            maximum={props.data.maxTemp}
+            minimum={props.data.minTemp}
+          />
         </div>
         <div className="parameters">
           <div className="d-flex justify-content-evently">
@@ -118,9 +118,6 @@ export default function WeatherInfo(props) {
             <p>SUN</p>
           </strong>
         </div>
-      </div>
-      <div>
-        <a href="/">°F</a> | <a href="/">°C</a>
       </div>
     </div>
   );

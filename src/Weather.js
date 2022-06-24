@@ -10,13 +10,13 @@ export default function Weather(props) {
   function displayWeather(response) {
     setWeather({
       ready: true,
-      temperature: Math.round(response.data.main.temp),
+      temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
-      maxTemp: Math.round(response.data.main.temp_max),
-      minTemp: Math.round(response.data.main.temp_min),
+      maxTemp: response.data.main.temp_max,
+      minTemp: response.data.main.temp_min,
       icon: response.data.weather[0].icon,
     });
   }
