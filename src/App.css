@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: 100px 320px 100px 320px;
+  margin: 100px 320px 10px 320px;
   border: 1px solid #a4a2a2c0;
   font-family: "Lato", sans-serif;
   color: #969595;
@@ -59,6 +59,11 @@
   bottom: 5px;
   left: 0px;
   transition: all 0.3s ease;
+}
+footer {
+  font-family: "Lato", sans-serif;
+  color: #969595;
+  text-align: center;
 }
 
 .form input:focus + .label-name .content-input,
