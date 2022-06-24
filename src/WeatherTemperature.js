@@ -28,14 +28,11 @@ export default function WeatherTemperature(props) {
   if (unit === `celsius`) {
     return (
       <div>
-        <div className="weatherTemperature">
-          <p className="daily-temperature">{Math.round(props.celsius)}°</p>
-          <strong>
-            <p className="max-min-temperature">
-              {Math.round(props.maximum)}° / {Math.round(props.minimum)}°
-            </p>
-          </strong>
-        </div>
+        <p className="daily-temperature">{Math.round(props.celsius)}°</p>
+        <p className="max-min-temperature">
+          <strong> {Math.round(props.maximum)}°</strong> /{" "}
+          {Math.round(props.minimum)}°
+        </p>
         <div className="unitsLink">
           <a href="/" onClick={showFahrenheit}>
             °F
@@ -49,11 +46,11 @@ export default function WeatherTemperature(props) {
       <div>
         <div className="weatherTemperature">
           <p className="daily-temperature">{Math.round(fahrenheit())}°</p>
-          <strong>
-            <p className="max-min-temperature">
-              {Math.round(fahrenheitMax())}° / {Math.round(fahrenheitMin())}°
-            </p>
-          </strong>
+
+          <p className="max-min-temperature">
+            <strong> {Math.round(fahrenheitMax())}°</strong> /{" "}
+            {Math.round(fahrenheitMin())}°
+          </p>
         </div>
         <div className="unitsLink">
           °F |{" "}
