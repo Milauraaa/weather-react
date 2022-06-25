@@ -53,7 +53,7 @@ export default function Weather(props) {
               onChange={updateCity}
               required
             />
-            <label for="enter-city" className="label-name">
+            <label forHTML="enter-city" className="label-name">
               <span className="content-input">Enter a city...</span>
             </label>
           </form>
