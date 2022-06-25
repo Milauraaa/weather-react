@@ -1,5 +1,4 @@
 import React from "react";
-import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
@@ -32,7 +31,7 @@ export default function WeatherInfo(props) {
                 {" "}
                 <span className="numbers">{props.data.wind}</span>{" "}
               </strong>{" "}
-              km/h
+              <small>km/h</small>
             </div>
           </div>
           <div className="d-flex justify-content-evently">
@@ -44,19 +43,19 @@ export default function WeatherInfo(props) {
                 {" "}
                 <span className="numbers">{props.data.humidity}</span>{" "}
               </strong>{" "}
-              %
+              <small> %</small>
             </div>
           </div>
           <div className="d-flex justify-content-evently">
             <div className="icon">
-              <i className="fa-solid fa-umbrella"></i>{" "}
+              <i className="fa-solid fa-arrow-down-long"></i>{" "}
             </div>
-            <div className="ms-3">
+            <div className="ms-4">
               <strong>
                 {" "}
-                <span className="numbers">10</span>{" "}
+                <span className="numbers">{props.data.pressure}</span>{" "}
               </strong>{" "}
-              %
+              <small> pa</small>
             </div>
           </div>
         </div>

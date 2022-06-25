@@ -28,7 +28,10 @@ export default function WeatherTemperature(props) {
   if (unit === `celsius`) {
     return (
       <div>
-        <p className="daily-temperature">{Math.round(props.celsius)}°</p>
+        <p className="daily-temperature">
+          {Math.round(props.celsius)}
+          <small>°</small>
+        </p>
         <p className="max-min-temperature">
           <strong> {Math.round(props.maximum)}°</strong> /{" "}
           {Math.round(props.minimum)}°
