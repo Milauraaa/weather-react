@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 
+import "./Weather.css";
+
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ ready: false });

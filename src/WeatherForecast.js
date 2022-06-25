@@ -26,7 +26,7 @@ export default function WeatherForecast(props) {
   }
   if (loaded) {
     return (
-      <div className="d-flex justify-content-evenly m-5">
+      <div className="d-flex justify-content-evenly weather-forecast">
         {forecast.map(function(dailyForecast, index) {
           if (index < 5) {
             return (

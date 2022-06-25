@@ -1,0 +1,39 @@
+.form input {
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+  color: #3e3d3d;
+  border: none;
+  outline: none;
+}
+.form label {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 1px solid black;
+}
+.form {
+  height: 50px;
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.content-input {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-input,
+.form input:valid + .label-name .content-input {
+  transform: translateY(-130%);
+  font-size: 12px;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}

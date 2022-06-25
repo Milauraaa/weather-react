@@ -4,13 +4,13 @@ import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div>
       <h3 className="m-4 daily-description">
         {" "}
         Right now in <span className="city">{props.data.city}</span>, it's{" "}
         {props.data.description}.
       </h3>
-      <div className="d-flex justify-content-evenly m-5">
+      <div className="d-flex justify-content-evenly WeatherInfo">
         <div className="animated-icon">
           <WeatherIcon code={props.data.icon} size={100} />
         </div>
