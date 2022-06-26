@@ -28,6 +28,7 @@ export default function WeatherIcon(props) {
       color="#ffcc00"
       size={props.size}
       animate={true}
+      alt="weather animated-icon"
     />
   );
 }

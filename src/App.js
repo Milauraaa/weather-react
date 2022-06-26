@@ -9,7 +9,11 @@ function App() {
         <Weather defaultCity="Lisbon" />
       </div>
       <footer>
-        <a href="https://github.com/Milauraaa/weather-react" tagret="_blank">
+        <a
+          href="https://github.com/Milauraaa/weather-react"
+          tagret="_blank"
+          title="GitHub link Weather-react project Yemelianenko Mila"
+        >
           Open-source code
         </a>
         , by Mila Yemelianenko

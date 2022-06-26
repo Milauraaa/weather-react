@@ -37,7 +37,11 @@ export default function WeatherTemperature(props) {
           {Math.round(props.minimum)}°
         </p>
         <div className="unitsLink">
-          <a href="/" onClick={showFahrenheit}>
+          <a
+            href="/"
+            title="link changed degrees to fahrenheit"
+            onClick={showFahrenheit}
+          >
             °F
           </a>{" "}
           | °C
@@ -57,7 +61,11 @@ export default function WeatherTemperature(props) {
         </div>
         <div className="unitsLink">
           °F |{" "}
-          <a href="/" onClick={showCelsius}>
+          <a
+            href="/"
+            title="link changed degrees to celsius"
+            onClick={showCelsius}
+          >
             °C
           </a>
         </div>
